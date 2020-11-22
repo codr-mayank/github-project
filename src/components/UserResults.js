@@ -4,6 +4,7 @@ import Navbar from './commons/Navbar';
 
 class Users extends Component {
   render() {
+    var profile_url = `https://www.github.com/${this.props.user.userArray[0].login}`;
     return (this.props.user.isResultPresent) ? (
       (this.props.user.total_count > 0) ? (
         <div>
@@ -12,7 +13,7 @@ class Users extends Component {
           <br></br>
           <div className="search-result-row">
             <img src={this.props.user.userArray[0].avatar_url} alt=""></img>
-            {this.props.user.userArray[0].login}
+            <a href={profile_url}>{this.props.user.userArray[0].login}</a>
           </div>
         </div >
       ) : (
