@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  font-size: 1.5rem;
+}
+
+nav {
+  padding: 1.5rem;
+  background-color: rgb(165, 42, 42);
+}
+
+nav ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(1rem, 1fr));
+  justify-content: space-around;
+  align-items: center;
+  color: goldenrod;
+}
+
+nav ul li {
+  color: goldenrod;
+}
+
+nav ul li:hover {
+  filter: brightness(0.5);
+  transform: scale(1.1);
+  color: goldenrod;
+}
+
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  font-size: 2rem;
+  color: goldenrod;
+}
+
+nav ul li {
+  justify-items: center;
+  align-self: center;
+  text-align: center;
+}
+
+nav ul .home {
+  grid-column: 1/ 2;
+}
+
+nav ul .search {
+  grid-column: 2/ 3;
+}
+
+nav ul .results {
+  grid-column: 3/ 4;
+}
+
+nav ul .signIn {
+  grid-column: 7/ 9;
+}
+
+img {
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+}
+
+.search-result-row {
+  justify-content: space-around;
+  align-items: center;
+}
