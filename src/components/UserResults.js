@@ -4,7 +4,13 @@ import Navbar from './commons/Navbar';
 
 class Users extends Component {
   render() {
-    var profile_url = `https://www.github.com/${this.props.user.userArray[0].login}`;
+    var profile_url;
+    (this.props.user.isResultPresent) ?
+      (
+        profile_url = `https://www.github.com/${this.props.user.userArray[0].login}`
+      ) : (
+        profile_url = ''
+      )
     return (this.props.user.isResultPresent) ? (
       (this.props.user.total_count > 0) ? (
         <div>
