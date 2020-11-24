@@ -11,3 +11,9 @@ export const githubUser = value => async dispatch => {
   dispatch({ type: 'GITHUB_USER', payload: response.data });
   history.push('/results');
 }
+
+export const resultsUnmount = () => {
+  return {
+    type: 'RESULTS_UNMOUNT'
+  }
+}

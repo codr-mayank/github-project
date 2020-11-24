@@ -22,6 +22,9 @@ const userReducer = (state = { isResultPresent: 0 }, action) => {
       console.log(finalState);
       return finalState;
     }
+    case 'RESULTS_UNMOUNT': {
+      return { isResultPresent: 0 };
+    }
     default: {
       return state;
     }

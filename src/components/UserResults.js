@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { resultsUnmount } from '../actions';
 import Navbar from './commons/Navbar';
 
 class Users extends Component {
+
+  componentWillUnmount() {
+    this.props.resultsUnmount();
+  }
+
   render() {
     var profile_url;
     (this.props.user.isResultPresent) ?
@@ -11,6 +17,7 @@ class Users extends Component {
       ) : (
         profile_url = ''
       )
+
     return (this.props.user.isResultPresent) ? (
       (this.props.user.total_count > 0) ? (
         <div>
@@ -41,4 +48,4 @@ const mapStateToProps = (state) => {
   return state;
 }
 
-export default connect(mapStateToProps)(Users);
+export default connect(mapStateToProps, { resultsUnmount })(Users);
